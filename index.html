@@ -6,14 +6,94 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./style/style.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/bfa6ed3b7f.js" crossorigin="anonymous"></script>
   <title>Document</title>
 </head>
 
 <body>
   <script type="module">import "./controller/main.js";</script>
-  <header>hometask1</header>
-  <main>
 
+  <div class="modal">
+    <div class="modal__body">
+      <h2 class="modal__title">Add note</h2>
+      <form class="modal__form">
+        <div class="modal__item">
+          <label for="name">Name:</label>
+          <input type="name" id="name" name="name" />
+        </div>
+        <div class="modal__item">
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" />
+        </div>
+        <div class="modal__item">
+          <label for="category">Category:</label>
+          <select name="category" id="category">
+            <option value="task">Task</option>
+            <option value="idea">Idea</option>
+            <option value="quote">Quote</option>
+            <option value="random">Random Thougth</option>
+          </select>
+        </div>
+        <textarea class="modal__text"></textarea>
+        <input class="modal__btn" type="submit" value="save" />
+      </form>
+    </div>
+  </div>
+  <header class=" header">
+    <h1>hometask1</h1>
+  </header>
+  <main>
+    <section class="list">
+      <div class="list__table note">
+        <div class="list__row list__row-header">
+          <p>Name</p>
+          <p>Created</p>
+          <p>Category</p>
+          <p>Content</p>
+          <p>Dates</p>
+          <div>
+            <button class="list__archive">Archive</button>
+          </div>
+        </div>
+        <div class="list__row">
+          <div class="list__name">
+            <div class="list__icon">
+              <i class="fa-regular fa-lightbulb"></i>
+            </div>
+            <p>Test</p>
+          </div>
+          <p>10.23.2022</p>
+          <p>Task</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis architecto</p>
+          <p>10.23.2023</p>
+          <div>
+            <button class="list__btn"><i class="fa-solid fa-pen"></i></button>
+            <button class="list__btn"><i class="fa-solid fa-box-archive"></i></button>
+            <button class="list__btn"><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+      </div>
+      <button class="list__create">Create Note</button>
+    </section>
+    <section class="list">
+      <div class="list__table statistics">
+        <div class="list__row list__row-header">
+          <div>Note Category</div>
+          <div>Active</div>
+          <div>Archived</div>
+        </div>
+        <div class="list__row">
+          <div class="list__name">
+            <div class="list__icon">
+              <i class="fa-regular fa-lightbulb"></i>
+            </div>
+            <p>Task</p>
+          </div>
+          <p>12</p>
+          <p>1</p>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 
