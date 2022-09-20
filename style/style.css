@@ -28,6 +28,10 @@
   width: 100%;
 }
 
+.note__list{
+  min-height: 300px;
+}
+
 .list__row{
   display: grid;
   align-items: center;
@@ -60,11 +64,12 @@
 }
 
 .list__icon{
-  padding: 5px 0;
+  padding: 8px 0;
   width: 38px;
+  height: 22px;
   margin: 0 10px;
 
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
 
   border-radius: 50%;
@@ -87,6 +92,7 @@
 }
 
 .list__archive{
+  width: 110px;
   padding: 3px 10px;
   
   font-weight: bold;
@@ -118,10 +124,9 @@
 }
 
 .modal{
-  position: absolute;
+  position: fixed;
 
   display: none;
-  /* display: flex; */
   justify-content: center;
   align-items: center;
 
@@ -187,5 +192,19 @@
 }
 
 .modal__btn{
+  cursor: pointer;
+}
+
+.modal__close{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  font-size: 20px;
+
+  border: none;
+
+  background-color: transparent;
+
   cursor: pointer;
 }

@@ -13,9 +13,10 @@
 <body>
   <script type="module">import "./controller/main.js";</script>
 
-  <div class="modal">
+  <div class="modal" id="modal">
     <div class="modal__body">
-      <h2 class="modal__title">Add note</h2>
+      <h2 class="modal__title" id="modalTitle">Add note</h2>
+      <button class="modal__close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
       <form class="modal__form">
         <div class="modal__item">
           <label for="name">Name:</label>
@@ -34,17 +35,17 @@
             <option value="random">Random Thougth</option>
           </select>
         </div>
-        <textarea class="modal__text"></textarea>
-        <input class="modal__btn" type="submit" value="save" />
+        <textarea class="modal__text" id="text"></textarea>
+        <input class="modal__btn" type="submit" value="save" id="save" />
       </form>
     </div>
   </div>
-  <header class=" header">
+  <header class="header">
     <h1>hometask1</h1>
   </header>
   <main>
-    <section class="list">
-      <div class="list__table note">
+    <section class="list note__list">
+      <div class="list__table note" id="notesList">
         <div class="list__row list__row-header">
           <p>Name</p>
           <p>Created</p>
@@ -52,45 +53,18 @@
           <p>Content</p>
           <p>Dates</p>
           <div>
-            <button class="list__archive">Archive</button>
-          </div>
-        </div>
-        <div class="list__row">
-          <div class="list__name">
-            <div class="list__icon">
-              <i class="fa-regular fa-lightbulb"></i>
-            </div>
-            <p>Test</p>
-          </div>
-          <p>10.23.2022</p>
-          <p>Task</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis architecto</p>
-          <p>10.23.2023</p>
-          <div>
-            <button class="list__btn"><i class="fa-solid fa-pen"></i></button>
-            <button class="list__btn"><i class="fa-solid fa-box-archive"></i></button>
-            <button class="list__btn"><i class="fa-solid fa-trash"></i></button>
+            <button class="list__archive" id="archive">Archive</button>
           </div>
         </div>
       </div>
-      <button class="list__create">Create Note</button>
+      <button class="list__create" id="createNote">Create Note</button>
     </section>
     <section class="list">
-      <div class="list__table statistics">
+      <div class="list__table statistics" id="categoryList">
         <div class="list__row list__row-header">
           <div>Note Category</div>
           <div>Active</div>
           <div>Archived</div>
-        </div>
-        <div class="list__row">
-          <div class="list__name">
-            <div class="list__icon">
-              <i class="fa-regular fa-lightbulb"></i>
-            </div>
-            <p>Task</p>
-          </div>
-          <p>12</p>
-          <p>1</p>
         </div>
       </div>
     </section>
