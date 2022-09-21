@@ -4,7 +4,7 @@ import validator from "./validator.js";
 
 import {
   notes,
-  getDataStorege,
+  getDataStorage,
   deleteNoteData,
   editNoteData,
   archiveNoteData,
@@ -14,7 +14,7 @@ import {
 
 import { drawNotesList, drawCategoryList } from "../view/draw.js";
 
-const BTNcreateNote = document.getElementById("createNote");
+const BTNCreateNote = document.getElementById("createNote");
 
 const save = document.getElementById("save");
 const modalClose = document.getElementById("modalClose");
@@ -26,7 +26,7 @@ const listElementsCategory = [];
 
 let archiveFlag = false;
 
-BTNcreateNote.addEventListener("click", () => open());
+BTNCreateNote.addEventListener("click", () => open());
 
 archive.addEventListener("click", () => {
   archiveFlag = !archiveFlag;
@@ -63,21 +63,21 @@ const addEventsOnBTN = () => {
 
 
 function deleteNote() {
-  deleteNoteData(searthIndexNote(+this.dataset.id));
+  deleteNoteData(searchIndexNote(+this.dataset.id));
 
   rebootLists();
 }
 
 function editNote() {
-  const id = searthIndexNote(+this.dataset.id);
+  const id = searchIndexNote(+this.dataset.id);
 
   open("edit", notes[id], id);
 }
 
 function archiveNote() {
-  archiveNoteData(searthIndexNote(+this.dataset.id));
+  archiveNoteData(searchIndexNote(+this.dataset.id));
 
-  rebootLists()
+  rebootLists();
 }
 
 const eventNoteBTN = [editNote, archiveNote, deleteNote];
@@ -87,19 +87,19 @@ const rebootLists = () => {
     drawNotesList(notes.filter(note => note.archived), listElementsNote) :
     drawNotesList(notes.filter(note => !note.archived), listElementsNote);
 
-  const category = getCategoryData()
+  const category = getCategoryData();
 
-  drawCategoryList(category, listElementsCategory)
+  drawCategoryList(category, listElementsCategory);
 
   addEventsOnBTN();
 }
 
-const searthIndexNote = (uuid) => {
+const searchIndexNote = (uuid) => {
   for (let i = 0; i < notes.length; i++) {
     if (notes[i].id === uuid) return i;
   }
 }
 
-getDataStorege();
+getDataStorage();
 rebootLists();
 addEventsOnBTN();

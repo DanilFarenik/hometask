@@ -1,5 +1,4 @@
 const name = document.getElementById("name");
-const date = document.getElementById("date");
 const category = document.getElementById("category");
 const text = document.getElementById("text");
 
@@ -21,7 +20,6 @@ const open = (type = "add", dataNote, id) => {
       modalTitle.dataset.id = id;
 
       name.value = dataNote.name;
-      date.value = dataNote.date[dataNote.date.length - 1];
       category.value = dataNote.category;
       text.value = dataNote.text;
 
@@ -51,7 +49,6 @@ const beckNormal = (element) => {
 
 const cleaning = () => {
   name.value = "";
-  date.value = "";
   category.value = "task";
   text.value = "";
 }
