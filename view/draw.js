@@ -33,7 +33,7 @@ const drawNotesList = (notes, listElementsNote) => {
         <button data-id="${note.id}" class="list__btn"><i class="fa-solid fa-pen"></i></button>
         <button data-id="${note.id}" class="list__btn"><i class="fa-solid fa-box-archive"></i></button>
         <button data-id="${note.id}" class="list__btn"><i class="fa-solid fa-trash"></i></button>
-      </div>`
+      </div>`;
   })
 }
 
@@ -46,7 +46,7 @@ const drawCategoryList = (categorys, listElementsCategory) => {
 
     row.classList.add("list__row");
     listElementsCategory.push(row);
-    categoryList.append(row)
+    categoryList.append(row);
 
     row.innerHTML = `
         <div class="list__name">
@@ -56,7 +56,7 @@ const drawCategoryList = (categorys, listElementsCategory) => {
           <p>${nameCategory}</p>
         </div>
         <p>${category.active}</p>
-        <p>${category.archived}</p>`
+        <p>${category.archived}</p>`;
   })
 }
 

@@ -8,16 +8,16 @@ const validator = (data) => {
   let flag = true;
 
   if (!data.name || data.name.length > 100) {
-    error(name)
+    error(name);
 
     flag = false;
-  } else beckNormal(name)
+  } else beckNormal(name);
 
   if (!data.text || data.text.length > 200) {
     error(text)
 
     flag = false;
-  } else beckNormal(text)
+  } else beckNormal(text);
 
   return flag;
 }
