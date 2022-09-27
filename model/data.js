@@ -23,7 +23,7 @@ const saveNotes = () => {
 const deleteNoteData = (id) => {
   notes = [...notes.slice(0, id), ...notes.slice(id + 1, notes.length)];
 
-  saveNotes()
+  saveNotes();
 }
 
 const editNoteData = (data, id) => {

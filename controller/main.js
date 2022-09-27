@@ -14,10 +14,10 @@ import {
 
 import { drawNotesList, drawCategoryList } from "../view/draw.js";
 
-const BTNCreateNote = document.getElementById("createNote");
+const CreateNoteBTN = document.getElementById("createNote");
 
-const save = document.getElementById("save");
-const modalClose = document.getElementById("modalClose");
+const saveBTN = document.getElementById("save");
+const modalCloseBTN = document.getElementById("modalClose");
 
 const archiveBTN = document.getElementById("archive");
 
@@ -26,7 +26,7 @@ const listElementsCategory = [];
 
 let archiveFlag = false;
 
-BTNCreateNote.addEventListener("click", () => open());
+CreateNoteBTN.addEventListener("click", () => open());
 
 archive.addEventListener("click", () => {
   archiveFlag = !archiveFlag;
@@ -36,7 +36,7 @@ archive.addEventListener("click", () => {
   rebootLists();
 })
 
-save.addEventListener("click", (e) => {
+saveBTN.addEventListener("click", (e) => {
   e.preventDefault();
 
   const { data, id } = getData();
@@ -49,7 +49,7 @@ save.addEventListener("click", (e) => {
   rebootLists();
 })
 
-modalClose.addEventListener("click", close);
+modalCloseBTN.addEventListener("click", close);
 
 const addEventsOnBTN = () => {
   listElementsNote.map(noteElement => {

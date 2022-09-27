@@ -9,7 +9,7 @@ const icons = {
 }
 
 const drawNotesList = (notes, listElementsNote) => {
-  clearList(listElementsNote)
+  clearList(listElementsNote);
 
   notes.map(note => {
     const row = document.createElement("div");

@@ -26,7 +26,7 @@ const open = (type = "add", dataNote, id) => {
       break;
     }
     default: {
-      close()
+      close();
     }
   }
 }
@@ -36,15 +36,15 @@ const close = () => {
 
   modalTitle.dataset.id = null;
 
-  cleaning()
+  cleaning();
 }
 
 const error = (element) => {
-  element.style.borderColor = "#ff0000"
+  element.style.borderColor = "#ff0000";
 }
 
 const beckNormal = (element) => {
-  element.style.borderColor = "#000000"
+  element.style.borderColor = "#000000";
 }
 
 const cleaning = () => {
